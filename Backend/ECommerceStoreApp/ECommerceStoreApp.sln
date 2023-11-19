@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceStoreApp.WebAPI", "ECommerceStoreApp\ECommerceStoreApp.WebAPI.csproj", "{8E324A1C-393E-446D-A435-CB92F3403A2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceStoreApp", "ECommerceStoreApp\ECommerceStoreApp.csproj", "{8E324A1C-393E-446D-A435-CB92F3403A2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceStoreApp.DataAccess", "ECommerceStoreApp.DataAccess\ECommerceStoreApp.DataAccess.csproj", "{35283A67-C8CD-4A36-89EB-C5A47575979E}"
 EndProject

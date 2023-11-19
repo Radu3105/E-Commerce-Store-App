@@ -1,11 +1,28 @@
+using ECommerceStoreApp.DataAccess.Context;
+using ECommerceStoreApp.DataAccess.Implementation;
+using ECommerceStoreApp.Domain.Abstractions;
+using ECommerceStoreApp.Domain.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Configure Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Add Entity Framework Core
+builder.Services.AddDbContext<ECommerceStoreAppContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+// Register UnitOfWork
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddTransient<ProductService>();
 
 var app = builder.Build();
 
