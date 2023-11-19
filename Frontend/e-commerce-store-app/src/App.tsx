@@ -1,31 +1,20 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import axios from "axios";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Components/Pages/Home/Home";
+import Products from "./Components/Pages/Products/Products";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
-    const [data, setData] = useState("");
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(
-                    "https://localhost:44361/WeatherForecast"
-                );
-                setData(response.data);
-            } catch (error) {
-                console.error("Error!");
-            }
-        };
-        fetchData();
-    }, []);
-
+    
     return (
         <>
-            {data ? (
-                <h1>Server responded with: "{data}"</h1>
-            ) : (
-                <h1>No connection between client and server</h1>
-            )}
+            <Router>
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/products" element={<Products />}></Route>
+                </Routes>
+            </Router>
         </>
     );
 }
