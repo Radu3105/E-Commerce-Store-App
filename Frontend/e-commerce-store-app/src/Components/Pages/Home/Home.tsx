@@ -1,10 +1,61 @@
-function Home() {
-    
+import "./home.css";
+import heroImg from "../../../assets/images/hero.png";
+import featuredProductImg1 from "../../../assets/images/featured_product_1.png";
+
+export default function Home() {
     return (
         <>
-            <h1>Home Page Component</h1>
+            <section className="home-hero-section">
+                <img className="home-hero-img" src={heroImg}></img>
+                <p className="home-hero-title">Fashion Store</p>
+            </section>
+            <section className="home-featured-section">
+                <div className="home-featured-category">
+                    <p>New Arrivals</p>
+                    <div className="home-featured-group">
+                        <div className="home-featured-item">
+                            <img src="" alt="item"></img>
+                            <p>Item</p>
+                            <button>Buy</button>
+                        </div>
+                        <div className="home-featured-item">
+                            <img src="" alt="item"></img>
+                            <p>Item</p>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="home-featured-category">
+                    <p>Best Sellers</p>
+                    <div className="home-featured-group">
+                        <div className="home-featured-item">
+                            <img src="" alt="item"></img>
+                            <p>Item</p>
+                            <button>Buy</button>
+                        </div>
+                        <div className="home-featured-item">
+                            <img src="" alt="item"></img>
+                            <p>Item</p>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="home-featured-category">
+                    <p>Sale</p>
+                    <div className="home-featured-group">
+                        <div className="home-featured-item">
+                            <img src="" alt="item"></img>
+                            <p>Item</p>
+                            <button>Buy</button>
+                        </div>
+                        <div className="home-featured-item">
+                            <img src="" alt="item"></img>
+                            <p>Item</p>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
-
-export default Home;
