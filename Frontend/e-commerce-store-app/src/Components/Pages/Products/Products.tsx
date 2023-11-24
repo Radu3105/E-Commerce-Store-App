@@ -1,6 +1,7 @@
 import "./products.css";
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router";
 
 interface Product {
     id: string;
@@ -16,6 +17,8 @@ interface ApiResponse {
 export default function Products() {
     const PRODUCTS_PER_PAGE: number = 20;
 
+    const navigate = useNavigate();
+
     const [loading, setLoading] = useState<boolean>(true);
     const [productsData, setProductsData] = useState<Product[]>([]);
     const [currentPageNumber, setCurrentPageNumber] = useState<number>(1);
@@ -26,7 +29,6 @@ export default function Products() {
             try {
                 setLoading(true);
                 const response = await axios.get<ApiResponse>(`${import.meta.env.VITE_API_URL}/Product?pageNumber=${currentPageNumber}&pageSize=${PRODUCTS_PER_PAGE}`);
-                console.log(response.data);
                 setProductsData(response.data.items);
                 setTotalPages(response.data.totalPages);
             } catch(error) {
@@ -47,6 +49,10 @@ export default function Products() {
         setCurrentPageNumber(parseInt(e.target.innerHTML));
     }
 
+    const handleOnCardClick = (productId: string) => {
+        navigate(productId);
+    }
+
     const renderPageButtons = () => {
         const buttons = [];
         for (let i = 0; i < totalPages; i++) {
@@ -60,7 +66,7 @@ export default function Products() {
             <div className="products-container">
                 <div className="products-product-list-container">
                     {productsData.map((product) => (
-                        <div className="products-product-card" key={product.id}>
+                        <div className="products-product-card" key={product.id} onClick={() => handleOnCardClick(product.id)}>
                             <img className="products-product-card-img" src="" alt="img"></img>
                             <div className="products-product-card-info">
                                 <p>{product.title}</p>

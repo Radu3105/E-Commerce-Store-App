@@ -29,6 +29,7 @@
     border: 1px solid black;
     padding: 30px;
     gap: 20px;
+    cursor: pointer;
 }
 
 .products-product-card-img {
