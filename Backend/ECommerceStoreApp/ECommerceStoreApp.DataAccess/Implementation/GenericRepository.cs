@@ -19,18 +19,10 @@ namespace ECommerceStoreApp.DataAccess.Implementation
             DbContext = dbContext;
         }
 
-        public virtual async Task<T> AddAsync(T entity)
+        public virtual async Task<T> GetByIdAsync(Guid id)
         {
-            var addedEntity = await DbContext.Set<T>().AddAsync(entity);
-            return addedEntity.Entity;
-        }
-
-        public virtual async Task RemoveAsync(Guid id)
-        {
-            var toRemove = await DbContext.Set<T>()
-                .FirstOrDefaultAsync(entity => entity.Id.Equals(id));
-
-            DbContext.Remove(toRemove);
+            var result = await DbContext.Set<T>().FindAsync(id);
+            return result;
         }
 
         public virtual async Task<IEnumerable<T>> GetAllAsync()
@@ -39,15 +31,29 @@ namespace ECommerceStoreApp.DataAccess.Implementation
             return result;
         }
 
-        public virtual async Task<T> GetByIdAsync(Guid id)
+        public virtual async Task<T> AddAsync(T entity)
         {
-            var result = await DbContext.Set<T>().FindAsync(id);
-            return result;
+            var addedEntity = await DbContext.Set<T>().AddAsync(entity);
+            return addedEntity.Entity;
         }
 
+        public virtual async Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities)
+        {
+            await DbContext.Set<T>().AddRangeAsync(entities);
+            return entities;
+        }
+        
         public Task<T> UpdateAsync(T entity)
         {
             throw new NotImplementedException();
+        }
+
+        public virtual async Task RemoveAsync(Guid id)
+        {
+            var toRemove = await DbContext.Set<T>()
+                .FirstOrDefaultAsync(entity => entity.Id.Equals(id));
+
+            DbContext.Remove(toRemove);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ECommerceStoreApp.Domain.Abstractions;
+using ECommerceStoreApp.Domain.Common;
 using ECommerceStoreApp.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,25 @@ namespace ECommerceStoreApp.Domain.Services
         {
         }
 
+        public async Task<PagedResult<Product>> GetPagedProductsAsync(int pageNumber, int pageSize)
+        {
+            var queryTask = UnitOfWork.ProductRepository.GetAllAsync();
+
+            var query = await queryTask;
+
+            var totalCount = query.ToList().Count();
+
+            var items = query.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+
+            return new PagedResult<Product>
+            {
+                Items = items,
+                TotalCount = totalCount,
+                PageNumber = pageNumber,
+                PageSize = pageSize
+            };
+        }
+
         public async Task<IEnumerable<Product>> GetAllProductsAsync()
         {
             return await UnitOfWork.ProductRepository.GetAllAsync();
@@ -22,6 +42,11 @@ namespace ECommerceStoreApp.Domain.Services
         public async Task<Product> AddProductAsync(Product product)
         {
             return await UnitOfWork.ProductRepository.AddAsync(product);
+        }
+
+        public async Task<IEnumerable<Product>> AddProductRangeAsync(IEnumerable<Product> products)
+        {
+            return await UnitOfWork.ProductRepository.AddRangeAsync(products);
         }
     }
 }

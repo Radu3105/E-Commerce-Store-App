@@ -1,4 +1,5 @@
-﻿using ECommerceStoreApp.Domain.Entities;
+﻿using ECommerceStoreApp.Domain.Common;
+using ECommerceStoreApp.Domain.Entities;
 using ECommerceStoreApp.Domain.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,21 +17,28 @@ namespace ECommerceStoreApp.Controllers
             _productService = productService;
         }
 
-        // GET: api/<ProductController>
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetProducts(int pageNumber = 1, int pageSize = 10)
         {
-            var products = await _productService.GetAllProductsAsync();
+            var products = await _productService.GetPagedProductsAsync(pageNumber, pageSize);
             return Ok(products);
         }
 
-        // POST: api/<ProductController>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Product product)
+        public async Task<IActionResult> AddProduct([FromBody] Product product)
         {
             var createdProduct = await _productService.AddProductAsync(product);
             await _productService.SaveAsync();
-            return CreatedAtAction(nameof(Get), new { id = createdProduct.Id }, createdProduct);
+            return CreatedAtAction(nameof(GetProducts), new { id = createdProduct.Id }, createdProduct);
+        }
+
+        [HttpPost("AddProductsRange")]
+        public async Task<IActionResult> AddProductsRange([FromBody] IEnumerable<Product> products)
+        {
+            var createdProducts = await _productService.AddProductRangeAsync(products);
+            await _productService.SaveAsync();
+    
+            return CreatedAtAction(nameof(GetProducts), createdProducts);
         }
     }
 }

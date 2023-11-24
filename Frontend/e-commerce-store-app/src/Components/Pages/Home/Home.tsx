@@ -1,6 +1,5 @@
 import "./home.css";
 import heroImg from "../../../assets/images/hero.png";
-import featuredProductImg1 from "../../../assets/images/featured_product_1.png";
 
 export default function Home() {
     return (

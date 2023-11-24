@@ -11,8 +11,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
-    const [linkDropdown, setLinkDropdown] = useState("");
-    const [searchDropdownMobile, setSearchDropdownMobile] = useState(false);
+    const [linkDropdown, setLinkDropdown] = useState<string>("");
+    const [searchDropdownMobile, setSearchDropdownMobile] = useState<boolean>(false);
 
     return (
         <header className="navbar-container">
@@ -23,11 +23,14 @@ export default function Navbar() {
                         src={logo}
                         alt="logo"
                     ></img>
-                    <p>E-Commerce Store</p>
+                    <p>Fashion Store</p>
                 </div>
             </Link>
             <div className="navbar-group">
                 <div className="navbar-links">
+                    <Link to="/products">
+                        <button>All Products</button>
+                    </Link>
                     <div className="navbar-dropdown">
                         <button
                             onMouseEnter={() => setLinkDropdown("collections")}
@@ -90,7 +93,7 @@ export default function Navbar() {
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                     <input type="search" placeholder="Search"></input>
                 </div>
-                <div 
+                <div
                     className="navbar-search-mobile"
                     onClick={() => setSearchDropdownMobile(true)}
                     onBlur={() => setSearchDropdownMobile(false)}
@@ -98,7 +101,11 @@ export default function Navbar() {
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                     {searchDropdownMobile && (
                         <div className="navbar-search-mobile-dropdown-content">
-                            <input type="search" placeholder="Search" autoFocus></input>
+                            <input
+                                type="search"
+                                placeholder="Search"
+                                autoFocus
+                            ></input>
                         </div>
                     )}
                 </div>
@@ -109,7 +116,10 @@ export default function Navbar() {
                     <FontAwesomeIcon icon={faCartShopping} />
                 </div>
                 <div className="navbar-menu-mobile">
-                    <div className="navbar-dropdown" onClick={() => setLinkDropdown("optionsMobile")} >
+                    <div
+                        className="navbar-dropdown"
+                        onClick={() => setLinkDropdown("optionsMobile")}
+                    >
                         <FontAwesomeIcon icon={faBars} />
                     </div>
                     {linkDropdown === "optionsMobile" && (
@@ -118,27 +128,48 @@ export default function Navbar() {
                             <Link to="/men" onClick={() => setLinkDropdown("")}>
                                 <p>Men</p>
                             </Link>
-                            <Link to="/women" onClick={() => setLinkDropdown("")}>
+                            <Link
+                                to="/women"
+                                onClick={() => setLinkDropdown("")}
+                            >
                                 <p>Women</p>
                             </Link>
-                            <Link to="/accessories" onClick={() => setLinkDropdown("")}>
+                            <Link
+                                to="/accessories"
+                                onClick={() => setLinkDropdown("")}
+                            >
                                 <p>Accessories</p>
                             </Link>
                             <h2>Specials</h2>
-                            <Link to="/sales" onClick={() => setLinkDropdown("")}>
+                            <Link
+                                to="/sales"
+                                onClick={() => setLinkDropdown("")}
+                            >
                                 <p>Sales</p>
                             </Link>
-                            <Link to="/newArrivals" onClick={() => setLinkDropdown("")}>
+                            <Link
+                                to="/newArrivals"
+                                onClick={() => setLinkDropdown("")}
+                            >
                                 <p>New Arrivals</p>
                             </Link>
-                            <Link to="/bestSellers" onClick={() => setLinkDropdown("")}>
+                            <Link
+                                to="/bestSellers"
+                                onClick={() => setLinkDropdown("")}
+                            >
                                 <p>Best Sellers</p>
                             </Link>
-                            <Link to="/limitedEdition" onClick={() => setLinkDropdown("")}>
+                            <Link
+                                to="/limitedEdition"
+                                onClick={() => setLinkDropdown("")}
+                            >
                                 <p>Limited Edition</p>
                             </Link>
                             <div className="navbar-customer-account-mobile">
-                                <FontAwesomeIcon icon={faUser} style={{color: "#ffffff",}} />
+                                <FontAwesomeIcon
+                                    icon={faUser}
+                                    style={{ color: "#ffffff" }}
+                                />
                                 <h3>My Account</h3>
                             </div>
                         </div>
@@ -148,20 +179,3 @@ export default function Navbar() {
         </header>
     );
 }
-
-/*
-    The navbar should consist of:
-    - Logo
-    - Links:
-        - Products:
-            - Men
-            - Women
-        - Special:
-            - Sales
-            - New Arrivals
-            - Best Sellers
-            - Limited Edition
-    - Search bar
-    - Customer account
-    - Shopping cart
-*/
