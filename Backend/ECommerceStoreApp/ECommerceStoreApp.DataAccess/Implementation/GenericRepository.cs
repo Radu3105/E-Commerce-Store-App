@@ -55,5 +55,23 @@ namespace ECommerceStoreApp.DataAccess.Implementation
 
             DbContext.Remove(toRemove);
         }
+
+        public virtual async Task RemoveByIdAsync(Guid id)
+        {
+            var entityToRemove = await DbContext.Set<T>().FindAsync(id);
+            if (entityToRemove != null)
+            {
+                DbContext.Remove(entityToRemove);
+            }
+        }
+
+        public virtual async Task RemoveAllAsync()
+        {
+            var entitiesToRemove = await DbContext.Set<T>().ToListAsync();
+            if (entitiesToRemove.Count > 0)
+            {
+                DbContext.RemoveRange(entitiesToRemove);
+            }
+        }
     }
 }

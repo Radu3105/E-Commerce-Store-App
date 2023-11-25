@@ -17,6 +17,13 @@ namespace ECommerceStoreApp.Controllers
             _productService = productService;
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetProductById(Guid id)
+        {
+            var product = await _productService.GetProductByIdAsync(id);
+            return Ok(product);
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetProducts(int pageNumber = 1, int pageSize = 10)
         {
@@ -39,6 +46,21 @@ namespace ECommerceStoreApp.Controllers
             await _productService.SaveAsync();
     
             return CreatedAtAction(nameof(GetProducts), createdProducts);
+        }
+
+        [HttpDelete()]
+        public async Task<IActionResult> DeleteProductById(Guid id)
+        {
+            await _productService.RemoveProductByIdAsync(id);
+            return Ok();
+        }
+
+        [HttpDelete("RemoveAllProducts")]
+        public async Task<IActionResult> DeleteAllProducts()
+        {
+            await _productService.RemoveAllProductsAsync();
+            await _productService.SaveAsync();
+            return Ok();
         }
     }
 }

@@ -34,6 +34,11 @@ namespace ECommerceStoreApp.Domain.Services
             };
         }
 
+        public async Task<Product> GetProductByIdAsync(Guid id)
+        {
+            return await UnitOfWork.ProductRepository.GetByIdAsync(id);
+        }
+
         public async Task<IEnumerable<Product>> GetAllProductsAsync()
         {
             return await UnitOfWork.ProductRepository.GetAllAsync();
@@ -47,6 +52,16 @@ namespace ECommerceStoreApp.Domain.Services
         public async Task<IEnumerable<Product>> AddProductRangeAsync(IEnumerable<Product> products)
         {
             return await UnitOfWork.ProductRepository.AddRangeAsync(products);
+        }
+
+        public async Task RemoveProductByIdAsync(Guid id)
+        {
+            await UnitOfWork.ProductRepository.RemoveByIdAsync(id);
+        }
+
+        public async Task RemoveAllProductsAsync()
+        {
+            await UnitOfWork.ProductRepository.RemoveAllAsync();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace ECommerceStoreApp.Domain.Abstractions
         Task<T> AddAsync(T entity);
         Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities);
         Task<T> UpdateAsync(T entity);
-        Task RemoveAsync(Guid id);
+        Task RemoveByIdAsync(Guid id);
+        Task RemoveAllAsync();
     }
 }
