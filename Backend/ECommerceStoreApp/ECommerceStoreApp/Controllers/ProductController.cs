@@ -52,6 +52,7 @@ namespace ECommerceStoreApp.Controllers
         public async Task<IActionResult> DeleteProductById(Guid id)
         {
             await _productService.RemoveProductByIdAsync(id);
+            await _productService.SaveAsync();
             return Ok();
         }
 
