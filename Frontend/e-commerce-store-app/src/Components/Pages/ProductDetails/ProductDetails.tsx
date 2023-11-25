@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./productDetails.css";
 import { useParams } from "react-router";
 import axios from "axios";
+import tshirtImg from '../../../assets/images/tshirt.png'
 
 interface Product {
     id: string;
@@ -57,10 +58,12 @@ export default function ProductDetails() {
         <>
             <div className="product-details-container">
                 <div className="product-details-group">
-                    <img className="product-details-img" src="" alt="img"></img>
+                    <img className="product-details-img" src={tshirtImg} alt="img"></img>
                     <div className="product-details-info">
                         <h1>{productData.title}</h1>
                         <h1>{productData.price}$</h1>
+                        <h2>Description</h2>
+                        <p>{productData.description}</p>
                         {/* <p>Variant:</p>
                         <div className="product-details-info-variant-options-container">
                             <button>1</button>
@@ -85,8 +88,6 @@ export default function ProductDetails() {
                             </div>
                             <button className="product-details-info-add-to-cart-btn">ADD TO CART</button>
                         </div>
-                        <h2>Description</h2>
-                        <p>{productData.description}</p>
                     </div>
                 </div>
             </div>

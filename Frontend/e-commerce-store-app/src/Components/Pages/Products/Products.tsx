@@ -2,6 +2,7 @@ import "./products.css";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router";
+import tshirtImg from '../../../assets/images/tshirt.png'
 
 interface Product {
     id: string;
@@ -67,7 +68,7 @@ export default function Products() {
                 <div className="products-product-list-container">
                     {productsData.map((product) => (
                         <div className="products-product-card" key={product.id} onClick={() => handleOnCardClick(product.id)}>
-                            <img className="products-product-card-img" src="" alt="img"></img>
+                            <img className="products-product-card-img" src={tshirtImg} alt="img"></img>
                             <div className="products-product-card-info">
                                 <p>{product.title}</p>
                                 <p>{product.price}$</p>
