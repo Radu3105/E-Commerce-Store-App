@@ -6,7 +6,7 @@ export default function Home() {
         <>
             <section className="home-hero-section">
                 <img className="home-hero-img" src={heroImg}></img>
-                <p className="home-hero-title">Fashion Store</p>
+                {/* <p className="home-hero-title">Fashion Store</p> */}
             </section>
             <section className="home-featured-section">
                 <div className="home-featured-category">

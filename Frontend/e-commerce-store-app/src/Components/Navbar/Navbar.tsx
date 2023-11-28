@@ -124,6 +124,10 @@ export default function Navbar() {
                     </div>
                     {linkDropdown === "optionsMobile" && (
                         <div className="navbar-dropdown-content-mobile">
+                            <h2>Products</h2>
+                            <Link to="/products" onClick={() => setLinkDropdown("")}>
+                                <p>All Products</p>
+                            </Link>
                             <h2>Collections</h2>
                             <Link to="/men" onClick={() => setLinkDropdown("")}>
                                 <p>Men</p>
