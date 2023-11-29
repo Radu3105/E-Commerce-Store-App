@@ -48,6 +48,14 @@ namespace ECommerceStoreApp.Controllers
             return CreatedAtAction(nameof(GetProducts), createdProducts);
         }
 
+        [HttpPut]
+        public async Task<IActionResult> UpdateProduct([FromBody] Product product)
+        {
+            var updatedProduct = await _productService.UpdateProductAsync(product);
+            await _productService.SaveAsync();
+            return Ok(updatedProduct);
+        }
+
         [HttpDelete()]
         public async Task<IActionResult> DeleteProductById(Guid id)
         {

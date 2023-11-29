@@ -16,5 +16,6 @@ namespace ECommerceStoreApp.DataAccess.Context
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductVariant> ProductVariants { get; set; }
     }
 }

@@ -43,9 +43,15 @@ namespace ECommerceStoreApp.DataAccess.Implementation
             return entities;
         }
         
-        public Task<T> UpdateAsync(T entity)
+        public async Task<T> UpdateAsync(T entity)
         {
-            throw new NotImplementedException();
+            var existingEntity = await DbContext.Set<T>().FindAsync(entity.Id);
+            if (existingEntity == null)
+            {
+                throw new KeyNotFoundException("Entity with the specified ID not found.");
+            }
+            DbContext.Entry(existingEntity).CurrentValues.SetValues(entity);
+            return existingEntity;
         }
 
         public virtual async Task RemoveAsync(Guid id)

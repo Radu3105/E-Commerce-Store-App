@@ -9,6 +9,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
+// Add CORS services
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyCorsPolicy", policy =>
+    {
+        policy.WithOrigins("http://86.123.41.253") // Your front-end application's URL
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Configure Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -22,7 +33,9 @@ builder.Services.AddDbContext<ECommerceStoreAppContext>(options =>
 // Register UnitOfWork
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
+// Register Services
 builder.Services.AddTransient<ProductService>();
+builder.Services.AddTransient<ProductVariantService>();
 
 var app = builder.Build();
 
@@ -34,6 +47,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Use CORS policy
+app.UseCors("MyCorsPolicy");
 
 app.UseAuthorization();
 

@@ -4,6 +4,7 @@ using ECommerceStoreApp.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ECommerceStoreApp.DataAccess.Migrations
 {
     [DbContext(typeof(ECommerceStoreAppContext))]
-    partial class ECommerceStoreAppContextModelSnapshot : ModelSnapshot
+    [Migration("20231125122434_RemoveProductFromProductVariant")]
+    partial class RemoveProductFromProductVariant
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,24 +72,6 @@ namespace ECommerceStoreApp.DataAccess.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<int>("QuantityL")
-                        .HasColumnType("int");
-
-                    b.Property<int>("QuantityM")
-                        .HasColumnType("int");
-
-                    b.Property<int>("QuantityS")
-                        .HasColumnType("int");
-
-                    b.Property<int>("QuantityXL")
-                        .HasColumnType("int");
-
-                    b.Property<int>("QuantityXS")
-                        .HasColumnType("int");
-
-                    b.Property<int>("QuantityXXL")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

@@ -54,6 +54,12 @@ namespace ECommerceStoreApp.Domain.Services
             return await UnitOfWork.ProductRepository.AddRangeAsync(products);
         }
 
+        public async Task<Product> UpdateProductAsync(Product product)
+        {
+            Product productToUpdate = await UnitOfWork.ProductRepository.UpdateAsync(product);
+            return productToUpdate;
+        }
+
         public async Task RemoveProductByIdAsync(Guid id)
         {
             await UnitOfWork.ProductRepository.RemoveByIdAsync(id);

@@ -9,6 +9,7 @@ namespace ECommerceStoreApp.Domain.Abstractions
     public interface IUnitOfWork
     {
         IProductRepository ProductRepository { get; }
+        IProductVariantRepository ProductVariantRepository { get; }
 
         Task SaveAsync(CancellationToken cancellationToken);
     }
