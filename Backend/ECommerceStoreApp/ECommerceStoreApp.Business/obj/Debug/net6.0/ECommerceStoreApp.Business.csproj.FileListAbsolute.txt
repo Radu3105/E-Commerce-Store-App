@@ -1,0 +1,17 @@
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\ECommerceStoreApp.Business.csproj.AssemblyReference.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\ECommerceStoreApp.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\ECommerceStoreApp.Business.AssemblyInfoInputs.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\ECommerceStoreApp.Business.AssemblyInfo.cs
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\ECommerceStoreApp.Business.csproj.CoreCompileInputs.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\bin\Debug\net6.0\ECommerceStoreApp.Business.deps.json
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\bin\Debug\net6.0\ECommerceStoreApp.Business.runtimeconfig.json
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\bin\Debug\net6.0\ECommerceStoreApp.Business.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\bin\Debug\net6.0\ECommerceStoreApp.Business.pdb
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\bin\Debug\net6.0\ECommerceStoreApp.DataAccess.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\bin\Debug\net6.0\ECommerceStoreApp.DataAccess.pdb
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\ECommerceStoreApp.Business.csproj.CopyComplete
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\ECommerceStoreApp.Business.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\refint\ECommerceStoreApp.Business.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\ECommerceStoreApp.Business.pdb
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\ECommerceStoreApp.Business.genruntimeconfig.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Business\obj\Debug\net6.0\ref\ECommerceStoreApp.Business.dll

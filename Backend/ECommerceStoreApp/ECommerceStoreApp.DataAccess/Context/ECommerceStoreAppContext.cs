@@ -1,4 +1,6 @@
-﻿using ECommerceStoreApp.Domain.Entities;
+﻿using ECommerceStoreApp.DataAccess.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ECommerceStoreApp.DataAccess.Context
 {
-    public class ECommerceStoreAppContext : DbContext
+    public class ECommerceStoreAppContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
     {
         public ECommerceStoreAppContext(DbContextOptions<ECommerceStoreAppContext> options)
         : base(options)

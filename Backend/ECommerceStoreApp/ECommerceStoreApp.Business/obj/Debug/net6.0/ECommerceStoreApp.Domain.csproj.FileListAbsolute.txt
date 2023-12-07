@@ -1,0 +1,17 @@
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\bin\Debug\net6.0\ECommerceStoreApp.Domain.deps.json
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\bin\Debug\net6.0\ECommerceStoreApp.Domain.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\bin\Debug\net6.0\ECommerceStoreApp.Domain.pdb
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\ECommerceStoreApp.Domain.csproj.AssemblyReference.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\ECommerceStoreApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\ECommerceStoreApp.Domain.AssemblyInfoInputs.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\ECommerceStoreApp.Domain.AssemblyInfo.cs
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\ECommerceStoreApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\ECommerceStoreApp.Domain.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\refint\ECommerceStoreApp.Domain.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\ECommerceStoreApp.Domain.pdb
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\ref\ECommerceStoreApp.Domain.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\bin\Debug\net6.0\ECommerceStoreApp.Domain.runtimeconfig.json
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\ECommerceStoreApp.Domain.genruntimeconfig.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\bin\Debug\net6.0\ECommerceStoreApp.Shared.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\bin\Debug\net6.0\ECommerceStoreApp.Shared.pdb
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\ECommerceStoreApp.Domain\obj\Debug\net6.0\ECommerceStoreApp.Domain.csproj.CopyComplete

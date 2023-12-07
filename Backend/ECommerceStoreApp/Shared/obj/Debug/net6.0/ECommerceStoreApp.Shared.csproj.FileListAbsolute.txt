@@ -1,0 +1,12 @@
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\bin\Debug\net6.0\ECommerceStoreApp.Shared.deps.json
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\bin\Debug\net6.0\ECommerceStoreApp.Shared.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\bin\Debug\net6.0\ECommerceStoreApp.Shared.pdb
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\obj\Debug\net6.0\ECommerceStoreApp.Shared.csproj.AssemblyReference.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\obj\Debug\net6.0\ECommerceStoreApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\obj\Debug\net6.0\ECommerceStoreApp.Shared.AssemblyInfoInputs.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\obj\Debug\net6.0\ECommerceStoreApp.Shared.AssemblyInfo.cs
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\obj\Debug\net6.0\ECommerceStoreApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\obj\Debug\net6.0\ECommerceStoreApp.Shared.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\obj\Debug\net6.0\refint\ECommerceStoreApp.Shared.dll
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\obj\Debug\net6.0\ECommerceStoreApp.Shared.pdb
+C:\Users\radug\Documents\Programming\Web Applications\E-commerce Store\Backend\ECommerceStoreApp\Shared\obj\Debug\net6.0\ref\ECommerceStoreApp.Shared.dll
