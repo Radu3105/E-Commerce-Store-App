@@ -73,7 +73,6 @@
     height: 45px;
     border: 3px solid black;
     border-radius: 100%;
-
     color: white;
     background: transparent;
 }
@@ -131,4 +130,5 @@
     background-color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
+    font-size: 20px;
 }

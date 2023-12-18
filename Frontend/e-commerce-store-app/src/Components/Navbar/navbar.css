@@ -106,7 +106,12 @@ button {
     gap: 20px;
 }
 
-.navbar-shopping-cart {
+.navbar-shopping-cart-btn {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
 }
 
 .navbar-menu-mobile {
@@ -128,6 +133,25 @@ button {
     background-color: white;
     box-shadow: 0px 5px 10px gray;
     z-index: 1;
+}
+
+.navbar-shopping-cart-dropdown-container {
+    position: absolute;
+    top: 99px;
+    right: 0;
+    width: 500px;
+    max-height: calc(75vh - 100px);
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 15px 15px gray;
+    z-index: 1;
+    overflow-y: scroll;
+}
+
+.navbar-shopping-cart-dropdown-title {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .navbar-dropdown-content a {
@@ -175,6 +199,78 @@ h3 {
 .navbar-dropdown-content a:hover {
     background-color: rgb(20, 20, 20);
     color: white;
+}
+
+.navbar-shopping-cart-item-count {
+    position: absolute;
+    left: 120%;
+    top: 12px;
+    height: 22px;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    cursor: default;
+}
+
+.navbar-shopping-cart-dropdown-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.navbar-shopping-cart-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-shopping-cart-group p {
+    font-size: 16px;
+}
+
+.navbar-shopping-cart-group-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* overflow-y: scroll; */
+}
+
+.navbar-shopping-cart-group-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: rgb(10, 153, 10);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar-shopping-cart-dropdown-checkout-btn {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+
+.navbar-shopping-cart-item-remove-btn {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: rgb(255, 0, 0);
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /* Mobile phones (portrait and landscape) ----------- */
